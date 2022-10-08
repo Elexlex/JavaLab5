@@ -1,10 +1,13 @@
 package Lab5;
 
 public class Person {
+
+    //fields
     private String name;
     private String surname;
     private int age;
 
+    //constructors
     public Person(){}
     public Person(String name, String surname, int age){
         this.name = name;
@@ -12,6 +15,7 @@ public class Person {
         this.age = age;
     }
 
+    //getters/setters
     public int getAge() {return age;}
 
     public String getName() {return name;}
@@ -24,15 +28,19 @@ public class Person {
 
     public void setSurname(String surname) {this.surname = surname;}
 
+    //a method that outputs a line
     public void printInfo(){
         System.out.println("\n\nHuman " + surname + " " + name + ", age " + age);
     }
 
 }
 class Student extends Person{
+
+    //fields
     private int group;
     private int studentID;
 
+    //constructors
     public Student(){
         super();
     }
@@ -42,19 +50,25 @@ class Student extends Person{
         this.group = group;
         this.studentID = studentID;
     }
+
+    //setters
     public void setGroup(int group) {this.group = group;}
 
     public void setStudentID(int studentID) {this.studentID = studentID;}
 
+    //a method that overrides the superclass method and outputs a line
     @Override
     public void printInfo() {
         System.out.println("\n\nGroup " + group + " student " + getSurname() + " " + getName() + ", age " + getAge() + ".\nStudent ID " + studentID);
     }
 }
 class Lecturer extends Person{
+
+    //fields
     private int salary;
     private String department;
 
+    //constructors
     public Lecturer(){
         super();
     }
@@ -64,10 +78,13 @@ class Lecturer extends Person{
         this.department = department;
         this.salary = salary;
     }
+
+    //setters
     public void setDepartment(String department) {this.department = department;}
 
     public void setSalary(int salary) {this.salary = salary;}
 
+    //another method that overrides the superclass method and outputs a line
     @Override
     public void printInfo() {
         System.out.println("\n\nDepartment of " + department + " teacher " + getSurname() + " " + getName() + ", age " + getAge() + ".\nSalary:" + salary);

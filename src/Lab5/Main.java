@@ -3,6 +3,8 @@ package Lab5;
 import java.util.Scanner;
 
 public class Main {
+
+    //a method that has an array of 3 objects of 3 classes. It asks the user if they are a person, student or lecturer. After that it calls the method and a method from another class.
     public static void main (String[] args){
         final int range = 3;
         Person[] personArray = new Person[range];
@@ -18,6 +20,8 @@ public class Main {
                 personInfo(personArray, menu);
                 personArray[menu-1].printInfo();
     }
+
+    //a method that receives user's choice and asks him some question. After that it fills the class setters
     private static void personInfo(Person[] personAr, int check){
         Scanner num = new Scanner(System.in);
         Scanner name = new Scanner(System.in);
